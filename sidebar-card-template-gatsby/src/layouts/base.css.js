@@ -1,4 +1,4 @@
-import { injectGlobal, css } from 'react-emotion'
+import { injectGlobal } from 'emotion'
 import { COLOURS } from '../../utils/theme'
 
 //Global normalised standard settings
