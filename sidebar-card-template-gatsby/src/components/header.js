@@ -1,6 +1,6 @@
 import React from 'react'
 import Link from 'gatsby-link'
-import HeaderContainer from './header.css'
+import HeaderContainer from './Header.css'
 
 import logo from '../resources/images/logo.png'
 import userpic from '../resources/images/user.jpg'
@@ -38,7 +38,7 @@ const Header = ({ siteTitle }) => (
       </div>
       <div className="user-nav__user">
         <img src={userpic} alt="user photo" className="user-nav__user-photo" />
-        <span className="user-nav__username" />
+        <span className="user-nav__username">Nim</span>
       </div>
     </nav>
   </HeaderContainer>

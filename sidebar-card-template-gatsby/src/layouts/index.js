@@ -1,10 +1,11 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 import Helmet from 'react-helmet'
+
 import globalStyles from './base.css'
 import { Container, Content, SideBar, MainContent } from './components.css'
-
 import Header from '../components/header'
+import SideNav from '../components/SideBarNav'
 
 const Layout = ({ children, data }) => (
   <Container >
@@ -17,9 +18,7 @@ const Layout = ({ children, data }) => (
     />
     <Header siteTitle={data.site.siteMetadata.title} />
     <Content>
-      <SideBar>
-        Side bar Navigation
-      </SideBar>
+      <SideNav />
       <MainContent>
         {children()}
       </MainContent>

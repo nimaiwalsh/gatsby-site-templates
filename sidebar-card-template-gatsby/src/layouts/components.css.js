@@ -12,15 +12,12 @@ export const Container = styled('div')`
 
 export const Content = styled('div')`
   display: flex;
-  
-`
-
-export const SideBar = styled('nav')`
-  background-color: ${COLOURS.greyDark1};
-  flex: 0 0 18%; /* Flex: flex-grow flex-shrink flex-basis */
 `
 
 export const MainContent = styled('main')`
   background-color: #FFF;
   flex: 1;
+
+  /* TEST */
+  height: 80rem;
 `
