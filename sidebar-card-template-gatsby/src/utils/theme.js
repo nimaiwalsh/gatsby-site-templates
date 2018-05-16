@@ -10,10 +10,13 @@ export const COLOURS = {
   greyDark2: '#777',
   greyDark3: '#999',
 
-  shadowDark: '0 2rem 6rem rgba(0%, 0%, 0%, 0.3)',
+  shadowDark: '0 2rem 6rem rgba(0,0,0,0.3)',
+  shadowLight: '0 2rem 5rem rgba(0,0,0,.06)',
 }
 
 export const CONTAINER = {
   //120 rem is 120 x 1200px
   maxWidth: '120rem',
 }
+
+export const LINE = `1px solid ${COLOURS.greyLight2}`

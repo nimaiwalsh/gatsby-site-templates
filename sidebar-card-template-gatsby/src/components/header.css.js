@@ -1,9 +1,9 @@
 import styled from 'react-emotion'
-import { COLOURS } from '../../utils/theme'
+import { COLOURS, LINE } from '../utils/theme'
 
 const HeaderContainer = styled('header')`
   background-color: #fff;
-  border-bottom: ${COLOURS.greyLight2};
+  border-bottom: ${LINE};
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -79,7 +79,7 @@ const HeaderContainer = styled('header')`
     align-items: center;
     justify-content: center;
 
-    /* Direct chidren */
+    /* Direct children */
     & > * {
       padding: 0 2rem;
       cursor: pointer;

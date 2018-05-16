@@ -1,5 +1,5 @@
 import styled from 'react-emotion'
-import { COLOURS } from '../../utils/theme'
+import { COLOURS } from '../utils/theme'
 
 const SideBarContainer = styled('nav')`
   background-color: ${COLOURS.greyDark1};
@@ -35,7 +35,7 @@ const SideBarContainer = styled('nav')`
       background-color: ${COLOURS.primary};
       z-index: -1;
       transform: scaleY(0);
-      transition: transform 0.2s,
+      transition: transform 0.2s, /*transform animation first*/
                   width cubic-bezier(1,0,0,1) 0.4s 0.2s, /*transiton length 0.4s delay by 0.2s*/
                   background-color 0.1s;
     }

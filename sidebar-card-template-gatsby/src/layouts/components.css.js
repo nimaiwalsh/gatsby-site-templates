@@ -1,9 +1,9 @@
 import styled from 'react-emotion'
-import { CONTAINER, COLOURS } from '../../utils/theme'
+import { CONTAINER, COLOURS } from '../utils/theme'
 
 export const Container = styled('div')`
   max-width: ${CONTAINER.maxWidth};
-  margin: 8rem auto; //Centre the container;
+  margin: 8rem auto; /*Centre the container*/
   background-color: ${COLOURS.greyLight2};
   box-shadow: ${COLOURS.shadowDark};
 
@@ -17,7 +17,4 @@ export const Content = styled('div')`
 export const MainContent = styled('main')`
   background-color: #FFF;
   flex: 1;
-
-  /* TEST */
-  height: 80rem;
 `

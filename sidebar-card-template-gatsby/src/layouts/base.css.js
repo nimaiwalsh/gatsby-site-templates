@@ -1,5 +1,5 @@
 import { injectGlobal } from 'emotion'
-import { COLOURS } from '../../utils/theme'
+import { COLOURS } from '../utils/theme'
 
 //Global normalised standard settings
 const globalStyles = injectGlobal`
@@ -26,6 +26,7 @@ const globalStyles = injectGlobal`
     font-family: 'Open Sans', sans-serif;
     font-weight: 400;
     line-height: 1.6;
+    color: ${COLOURS.greyDark2};
     background-image: linear-gradient(to right bottom, ${COLOURS.primaryLight}, ${COLOURS.primaryDark});
     background-size: cover;
     background-repeat: no-repeat;
