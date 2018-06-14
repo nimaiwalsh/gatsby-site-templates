@@ -1,14 +1,21 @@
 import styled from 'react-emotion'
-import { COLOURS, LINE } from '../utils/theme'
+import { COLOURS, LINE, BREAKPOINTS } from '../utils/theme'
 
 const HeaderContainer = styled('header')`
+  font-size: 1.4rem;
+  height: 7rem;
   background-color: #fff;
   border-bottom: ${LINE};
+
   display: flex;
   justify-content: space-between;
   align-items: center;
-  font-size: 1.4rem;
-  height: 7rem;
+  /*Wrap allows search to move to next row*/
+  @media only screen and (max-width: ${BREAKPOINTS.smallest}) {
+    flex-wrap: wrap;
+    height: 11rem;
+    align-content: space-around;
+  } 
 
   .logo {
     height: 3.25rem;
@@ -21,7 +28,12 @@ const HeaderContainer = styled('header')`
     display: flex;
     justify-content: center;
     align-items: center;
-    color: ${COLOURS.greyDark3};
+    /*move search bar to the next row so we can wrap it - parent container needs flex-wrap*/
+    @media only screen and (max-width: ${BREAKPOINTS.smallest}) {
+      order: 1;
+      flex: 0 0 100%;
+      background-color: ${COLOURS.greyLight2};
+    } 
 
     &__input {
       font-family: inherit;

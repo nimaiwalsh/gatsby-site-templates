@@ -1,5 +1,5 @@
 import styled from 'react-emotion'
-import { COLOURS } from '../utils/theme'
+import { COLOURS, BREAKPOINTS } from '../utils/theme'
 
 const SideBarContainer = styled('nav')`
   background-color: ${COLOURS.greyDark1};
@@ -15,12 +15,23 @@ const SideBarContainer = styled('nav')`
     list-style: none;
     margin-top: 3.5rem;
 
+    @media only screen and (max-width: ${BREAKPOINTS.medium}) {
+      display: flex;
+      margin: 0;
+    }
 
     &__item {
       position: relative;
-      /*pseudoclass - all but last child*/
       &:not(:last-child) {
         margin-bottom: 0.5rem;
+
+        @media only screen and (max-width: ${BREAKPOINTS.medium}) {
+          margin-bottom: 0;
+        } 
+      }
+
+      @media only screen and (max-width: ${BREAKPOINTS.medium}) {
+        flex: 1;
       }
     }
     
@@ -61,6 +72,16 @@ const SideBarContainer = styled('nav')`
       z-index: 1;
       display: flex;
       align-items: center;
+
+      @media only screen and (max-width: ${BREAKPOINTS.medium}) {
+        justify-content: center;
+        padding: 2rem;
+      }
+
+      @media only screen and (max-width: ${BREAKPOINTS.small}) {
+        flex-direction: column;
+        padding: 1.5rem 0.5rem;
+      }   
     }
 
     &__icon {
@@ -69,6 +90,13 @@ const SideBarContainer = styled('nav')`
       margin-right: 2rem;
       /* colour of parent element */
       fill: currentColor; 
+
+      @media only screen and (max-width: ${BREAKPOINTS.small}) {
+        margin-right: 0;
+        margin-bottom: .7rem;
+        width: 1.5rem;
+        height: 1.5rem;
+      }   
     }
   
   }
@@ -79,6 +107,9 @@ const SideBarContainer = styled('nav')`
     text-align: center;
     padding: 2.5rem;
 
+    @media only screen and (max-width: ${BREAKPOINTS.medium}) {
+      display: none;
+    }
   }
 `
 

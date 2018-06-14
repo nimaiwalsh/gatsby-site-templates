@@ -1,9 +1,13 @@
 import { css } from 'react-emotion'
-import { COLOURS } from '../utils/theme' 
+import { COLOURS, BREAKPOINTS } from '../utils/theme' 
 
 const styles = css`
  padding: 3.5rem 0;
  text-align: center;
+
+  @media only screen and (max-width: ${BREAKPOINTS.medium}) {
+    padding: 2.5rem 0;
+  }
 
  .book-now {
    font-size: 2rem;

@@ -52,6 +52,7 @@ const Hotel = ({ data }) => {
       </div>
 
       <div className="detail">
+
         <div className="description">
           <Paragraph>
             Lorem ipsum dolor sit amet, consectetur adipisicing elit. Animi nisi
@@ -117,7 +118,7 @@ const Hotel = ({ data }) => {
           <figure className="review">
             <blockquote className="review__text">
               Corporis incidunt deserunt quae architecto voluptate delectus,
-              inventore iure aliquid aliquam.
+              inventore iure aliquid aliquam. Deserunt quae architecto voluptate delectus.
             </blockquote>
             <figcaption className="review__user">
               <img

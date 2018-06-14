@@ -1,5 +1,5 @@
 import styled from 'react-emotion'
-import { COLOURS, LINE } from '../utils/theme'
+import { COLOURS, LINE, BREAKPOINTS } from '../utils/theme'
 
 const PageContainer = styled('div')`
   /*GALLERY SECTION*/
@@ -24,6 +24,11 @@ const PageContainer = styled('div')`
       text-transform: uppercase;
       letter-spacing: 1px;
       padding: 1.5rem 3rem;
+
+      @media only screen and (max-width: ${BREAKPOINTS.small}) {
+        font-size: 1.8rem;
+        padding: 1.25rem 2rem;
+      }   
     }
 
     &__stars {
@@ -63,17 +68,29 @@ const PageContainer = styled('div')`
       flex-direction: column;
       justify-content: center;
       align-items: center;
+
+      @media only screen and (max-width: ${BREAKPOINTS.small}) {
+        padding: 0 1.5rem;
+      }   
     }
 
     &__rating-average {
       font-size: 2.25rem;
       font-weight: 300;
       margin-bottom: -3px;
+
+      @media only screen and (max-width: ${BREAKPOINTS.small}) {
+        font-size: 1.8rem;
+      }   
     }
 
     &__rating-count {
       font-size: .8rem;
       text-transform: uppercase;
+
+      @media only screen and (max-width: ${BREAKPOINTS.small}) {
+        font-size: 0.5rem;
+      }  
     }
   }
 
@@ -84,6 +101,15 @@ const PageContainer = styled('div')`
     padding: 4.5rem;
     background-color: ${COLOURS.greyLight1};
     border-bottom: ${LINE};
+
+    /*Ensure the larger breakpoint is first if you have 2 of the same properties*/
+    @media only screen and (max-width: ${BREAKPOINTS.medium}) {
+      padding: 3rem;
+    }
+
+    @media only screen and (max-width: ${BREAKPOINTS.small}) {
+      flex-direction: column;
+    }
   }
 
   .description {
@@ -93,6 +119,16 @@ const PageContainer = styled('div')`
     padding: 3rem;
     flex: 0 0 60%;
     margin-right: 4.5rem;
+
+    @media only screen and (max-width: ${BREAKPOINTS.medium}) {
+      padding: 2rem;
+      margin-right: 3rem;
+    }
+
+    @media only screen and (max-width: ${BREAKPOINTS.small}) {
+      margin-right: 0;
+      margin-bottom: 3rem;
+    }
   }
 
   .user-reviews {
@@ -115,7 +151,7 @@ const PageContainer = styled('div')`
     }
 
     &__friends {
-
+      display: flex;
     }
 
     & img {
@@ -126,7 +162,7 @@ const PageContainer = styled('div')`
       border: .3rem solid #FFF;
       /*overlap images*/
       &:not(:last-child) {
-        margin-right: -1.5rem;
+        margin-right: -2rem;
       }
     }
   }
@@ -139,6 +175,11 @@ const PageContainer = styled('div')`
     margin-bottom: 3.5rem;
     position: relative;
     overflow: hidden;
+
+    @media only screen and (max-width: ${BREAKPOINTS.medium}) {
+      padding: 2rem;
+      margin-bottom: 3rem;
+    }
 
     &__text {
       position: relative;

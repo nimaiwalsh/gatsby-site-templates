@@ -2,7 +2,7 @@ import React from 'react'
 import PropTypes from 'prop-types'
 import Helmet from 'react-helmet'
 
-import globalStyles from './base.css'
+import globalStyles from './global.css'
 import { Container, Content, SideBar, MainContent } from './components.css'
 import Header from '../components/header'
 import SideNav from '../components/SideBarNav'

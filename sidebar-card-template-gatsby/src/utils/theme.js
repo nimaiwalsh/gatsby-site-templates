@@ -20,3 +20,11 @@ export const CONTAINER = {
 }
 
 export const LINE = `1px solid ${COLOURS.greyLight2}`
+
+export const BREAKPOINTS = {
+  largest: '75em', //1200px (1200 / 16)
+  large: '68.75em', //1100px (1100 / 16)
+  medium: '56.25em', //900px (900 / 16)
+  small: '37.5em', //600px (600 / 16)
+  smallest: '31.25em' //500px (500 / 16)
+}

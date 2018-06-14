@@ -16,7 +16,7 @@ const SideNav = () => {
   return (
     <SideBarContainer>
       <ul className="side-nav">
-        <li className="side-nav__item side-nav__item--active">
+        <li className="side-nav__item">
           <Link to="/hotel" className="side-nav__link" activeClassName={'side-nav__link--active'}>
             <svg className="side-nav__icon">
               <use xlinkHref={`#${home.id}`} />
