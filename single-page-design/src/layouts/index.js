@@ -15,11 +15,18 @@ injectGlobal`
     box-sizing: border-box;
   }
 
+  html {
+    /* Default font size is 16px*/
+    /* We want to use rems through out project and we want 1rem = 10px, 
+    /* So Font size should be 10px/16px = 62.5% */
+    font-size: 62.5%;
+  }
+
   body {
     /*This font family can now be inhertited from all child elements*/
     font-family: "Lato", sans-serif;
     font-weight: 400;
-    font-size: 16px;
+    font-size: 1.6rem;
     line-height: 1.7;
     color: #777;
     padding: 30px;  
@@ -35,10 +42,8 @@ const Layout = ({ children, data }) => (
         { name: 'keywords', content: 'sample, something' },
       ]}
     />
-    <Header siteTitle={data.site.siteMetadata.title} />
-    <div>
-      {children()}
-    </div>
+    <Header siteTitle={data.site.siteMetadata.title} data={data} />
+    <div>{children()}</div>
   </div>
 )
 
@@ -53,6 +58,11 @@ export const query = graphql`
     site {
       siteMetadata {
         title
+      }
+    }
+    headerImage: imageSharp(id: { regex: "/hero.jpg/" }) {
+      sizes(maxWidth: 1100) {
+        ...GatsbyImageSharpSizes
       }
     }
   }

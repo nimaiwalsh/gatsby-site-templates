@@ -1,19 +1,67 @@
-import { css } from 'react-emotion';
+import styled from 'react-emotion'
 import backgroundImage from '../resources/images/hero.jpg'
 import { COLOURS } from '../utils/theme'
 
-const styles = css`
-  height: 95vh;
-  background-image: linear-gradient(
-    to right bottom, 
-    rgba(126, 213, 111, 0.8), 
-    rgba(40, 180, 131, 0.8)), 
-    url(${backgroundImage});
-  background-size: cover;
-  background-position: top;
+const HeaderMain = styled('header')`
+  position: relative;
 
-  /*Create a nice polygon image and clip the bottom*/
-  clip-path: polygon(0 0, 100% 0, 100% 75vh, 0 100%);
+  /*Background image using Gatsby Image - unfortunately can't use CSS background-image property*/
+  & .background-image,
+  & .background-overlay {
+    position: absolute;
+    width: 100%;
+    height: 90vh;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    /* Create a nice polygon shape to clip the bottom*/
+    clip-path: polygon(0 0, 100% 0, 100% 75vh, 0 100%);
+  }
+
+  & .background-overlay {
+    background-image: linear-gradient(
+      to right bottom,
+      rgba(126, 213, 111, 0.8),
+      rgba(40, 180, 133, 0.8)
+    );
+  }
+
+  & .logo-box {
+    position: absolute;
+    top: 40px;
+    left: 4rem;
+  }
+
+  & .logo {
+    height: 3.5rem;
+  }
+
+  & .text-box {
+    /* Centre item */
+    position: absolute;
+    top: 40%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+
+  & .heading-primary {
+    color: #FFF;
+    text-transform: uppercase;
+
+    &__main {
+      display: block;
+      font-size: 6rem;
+      font-weight: 400;
+      letter-spacing: 3.5rem;
+    }
+
+    &__sub {
+      display: block;
+      font-size: 2rem;
+      font-weight: 700;
+      letter-spacing: 1.74rem;
+    }
+  }
 `
 
-export default styles
+export default HeaderMain

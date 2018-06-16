@@ -7,9 +7,13 @@
     "emotion": "^9.2.3",
     "emotion-server": "^9.2.3",
     "gatsby": "^1.9.247",
+    "gatsby-image": "^1.0.53",
     "gatsby-link": "^1.6.40",
     "gatsby-plugin-emotion": "^1.1.17",
     "gatsby-plugin-react-helmet": "^2.0.10",
+    "gatsby-plugin-sharp": "^1.6.47",
+    "gatsby-source-filesystem": "^1.5.38",
+    "gatsby-transformer-sharp": "^1.6.26",
     "react-emotion": "^9.2.3",
     "react-helmet": "^5.2.0"
   },
