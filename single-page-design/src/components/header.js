@@ -1,8 +1,10 @@
 import React from 'react'
 import Link from 'gatsby-link'
-import HeaderMain from './header.css'
 import Img from 'gatsby-image'
 import logo from '../resources/images/logo-white.png'
+
+import HeaderMain from './header.css'
+import { Button } from '../utils/styledComponents'
 
 const Header = ({ siteTitle, data }) => (
   //Background image needs to be own element and not css background property
@@ -20,6 +22,7 @@ const Header = ({ siteTitle, data }) => (
         <span className="heading-primary__main">Outdoors</span>
         <span className="heading-primary__sub">Is where life happens</span>
       </h1>
+      <Button white animated href="#">Click me</Button>
     </div>
 
   </HeaderMain>
