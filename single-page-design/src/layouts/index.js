@@ -4,7 +4,8 @@ import Helmet from 'react-helmet'
 import globalCSS from '../utils/global.css'
 
 import Header from '../components/header'
-import SectionOne from '../pages/SectionOne'
+import SectionAbout from '../pages/SectionAbout'
+import SectionFeatures from '../pages/SectionFeatures'
 
 const Layout = ({ children, data }) => (
   <div>
@@ -17,7 +18,8 @@ const Layout = ({ children, data }) => (
     />
     <Header siteTitle={data.site.siteMetadata.title} data={data} />
     <main>
-      <SectionOne />
+      <SectionAbout />
+      <SectionFeatures data={data}/>
     </main>
     {/* <div>{children()}</div> */}
   </div>
@@ -37,6 +39,11 @@ export const query = graphql`
       }
     }
     headerImage: imageSharp(id: { regex: "/hero.jpg/" }) {
+      sizes(maxWidth: 1100) {
+        ...GatsbyImageSharpSizes
+      }
+    }
+    sectionFeaturesImage: imageSharp(id: { regex: "/nat-4.jpg/" }) {
       sizes(maxWidth: 1100) {
         ...GatsbyImageSharpSizes
       }

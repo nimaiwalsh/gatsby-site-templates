@@ -4,7 +4,7 @@ import Img from 'gatsby-image'
 import logo from '../resources/images/logo-white.png'
 
 import HeaderMain from './header.css'
-import { Button } from '../utils/styledComponents'
+import { Button } from '../components/styledComponents'
 
 const Header = ({ siteTitle, data }) => (
   //Background image needs to be own element and not css background property

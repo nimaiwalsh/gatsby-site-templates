@@ -1,6 +1,6 @@
 import styled from 'react-emotion'
-import { COLOURS } from './theme'
-import { moveInBottom } from './animations.css'
+import { COLOURS, MARGIN, FONT } from '../utils/theme'
+import { moveInBottom } from '../utils/animations.css'
 
 export const HeadingSecondary = styled('h2')`
   font-size: 3.5rem;
@@ -13,7 +13,7 @@ export const HeadingSecondary = styled('h2')`
     ${COLOURS.colorPrimaryDark},
     ${COLOURS.colorPrimaryLight}
   );
-  /*Make background gradient display where text is only*/
+  /*Make background gradient display only where there is text*/
   -webkit-background-clip: text;
   color: transparent;
   
@@ -22,6 +22,23 @@ export const HeadingSecondary = styled('h2')`
   &:hover {
     transform: skewY(2deg) skewX(15deg) scale(1.1);
     text-shadow: .5rem 1rem 2rem rgba(0,0,0,.2);
+  }
+
+  /*PROPS UTILITIES*/
+  ${props => props.marginBottom && `margin-bottom: ${MARGIN.marginBottomLarge}`};
+`
+
+export const HeadingTertiary = styled('h3')`
+  font-size: ${FONT.fontSizeDefault};
+  font-weight: 700;
+  text-transform: uppercase;
+  ${props => props.marginBottom && `margin-bottom: ${MARGIN.marginBottomSmall}`};
+`
+
+export const Paragraph = styled('p')`
+  font-size: ${FONT.fontSizeDefault};
+  &:not(:last-child) {
+    margin-bottom: 3rem;
   }
 `
 
@@ -74,5 +91,30 @@ export const Button = styled('a')`
   &:hover::after {
     transform: scale(1.5);
     opacity: 0;
+  }
+`
+
+export const ButtonText = styled('a')`
+  &:link,
+  &:visited {
+    font-size: ${FONT.fontSizeDefault};
+    color: ${COLOURS.colorPrimary};
+    display: inline-block;
+    text-decoration: none;
+    border-bottom: 1px solid ${COLOURS.colorPrimary};
+    padding: 3px;
+    transition: all .2s;
+  }
+
+  &:hover {
+    background-color: ${COLOURS.colorPrimary};
+    color: #FFF;
+    box-shadow: 0 1rem 2rem rgba(0,0,0,.15);
+    transform: translateY(-2px);
+  }
+
+  &:active {
+    box-shadow: 0 .5rem 1rem rgba(0,0,0,.15);
+    transform: translateY(0);
   }
 `

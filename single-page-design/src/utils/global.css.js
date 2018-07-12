@@ -1,4 +1,5 @@
 import { injectGlobal } from 'react-emotion'
+import { FONT } from './theme'
 
 //Global styles and resets
 const globalCSS = injectGlobal`
@@ -23,7 +24,7 @@ const globalCSS = injectGlobal`
     /*This font family can now be inhertited from all child elements*/
     font-family: "Lato", sans-serif;
     font-weight: 400;
-    font-size: 1.6rem;
+    font-size: ${FONT.fontSizeDefault};
     line-height: 1.7;
     color: #777;
     padding: 3rem;

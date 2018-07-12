@@ -1,14 +1,8 @@
 import styled from 'react-emotion'
-import { COLOURS, GRID } from './theme'
-
-export const CenterText = styled('div')`
-  text-align: center;
-  ${props => props.marginBottom && 'margin-bottom: 8rem'};
-`
+import { COLOURS, GRID } from '../utils/theme'
 
 export const Row = styled('div')`
   max-width: ${GRID.gridWidth};
-  background-color: orange;
   margin: 0 auto;
   &:not(:last-child) {
     margin-bottom: ${GRID.gutterVertical};
@@ -46,7 +40,6 @@ export const Col = styled('div')`
       GRID.gutterHorizontal
     })`};
 
-  background-color: blue;
   float: left;
 
   &:not(:last-child) {

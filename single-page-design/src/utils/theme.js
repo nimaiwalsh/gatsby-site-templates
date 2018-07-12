@@ -10,8 +10,18 @@ export const COLOURS = {
   'colorBlack': '#000',
 }
 
+export const FONT = {
+  fontSizeDefault: '1.6rem',
+}
+
 export const GRID = {
   gridWidth: '114rem',
   gutterVertical: '8rem',
   gutterHorizontal: '6rem',
+}
+
+export const MARGIN = {
+  marginBottomSmall: '1.5rem',
+  marginBottomMedium: '4rem',
+  marginBottomLarge: '8rem',
 }

@@ -81,6 +81,4 @@ const HeaderMain = styled('header')`
   }
 `
 
-
-
 export default HeaderMain

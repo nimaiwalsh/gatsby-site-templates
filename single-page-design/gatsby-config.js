@@ -3,12 +3,11 @@ module.exports = {
     title: 'Gatsby Default Starter',
   },
   plugins: [
-    'gatsby-plugin-react-helmet',
+    `gatsby-plugin-react-helmet`,
     `gatsby-transformer-sharp`,
     `gatsby-plugin-sharp`,
-    {
-      resolve: `gatsby-plugin-emotion`,
-    },
+    `gatsby-plugin-emotion`,
+    `gatsby-plugin-svgr`,
     {
       resolve: `gatsby-source-filesystem`,
       options: {
