@@ -3,11 +3,20 @@ export const COLOURS = {
   'colorPrimaryLight': '#7ed56f',
   'colorPrimaryDark': '#28b485',
 
+  'colorSecondaryLight': '#FFB900',
+  'colorSecondaryDark': '#FF7730',
+
+  'colorTertiaryLight': '#2998FF',
+  'colorTertiaryDark': '#5643FA',
+
   'colorGreyLight1': '#f7f7f7',
   'colorGreyDark': '#777',
   'colorGreyMedium': '#c0c0c0ff',
   'colorWhite': '#FFF',
   'colorBlack': '#000',
+
+  'colorWhiteRGB': '255,255,255',
+  'colorBlackRGB': '0,0,0',
 }
 
 export const FONT = {

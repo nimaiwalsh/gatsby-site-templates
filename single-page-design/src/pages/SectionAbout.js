@@ -43,10 +43,10 @@ const SectionOne = () => (
         <ButtonText href="#">Press me &rarr;</ButtonText>
       </Col>
       <Col OneofTwo>
-        <ImageComposition 
-          image1={{img:Image1, alt:'Image 1'}} 
-          image2={{img:Image2, alt:'Image 2'}}
-          image3={{img:Image3, alt:'Image 3'}} 
+        <ImageComposition
+          image1={{ img: Image1, alt: 'Image 1' }}
+          image2={{ img: Image2, alt: 'Image 2' }}
+          image3={{ img: Image3, alt: 'Image 3' }}
         />
       </Col>
     </Row>

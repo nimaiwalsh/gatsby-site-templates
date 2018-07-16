@@ -6,6 +6,7 @@ import globalCSS from '../utils/global.css'
 import Header from '../components/header'
 import SectionAbout from '../pages/SectionAbout'
 import SectionFeatures from '../pages/SectionFeatures'
+import SectionTours from '../pages/SectionTours'
 
 const Layout = ({ children, data }) => (
   <div>
@@ -20,6 +21,7 @@ const Layout = ({ children, data }) => (
     <main>
       <SectionAbout />
       <SectionFeatures data={data}/>
+      <SectionTours />
     </main>
     {/* <div>{children()}</div> */}
   </div>

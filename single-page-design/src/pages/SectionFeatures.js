@@ -5,38 +5,41 @@ import { Row, Col } from '../components/layoutComponents'
 import FeatureBox from '../components/FeatureBox'
 import GatsbyImageBackground from '../components/GatsbyImageBackground'
 
-import { ReactComponent as Icon } from '../resources/icons/basic_alarm.svg'
+import { ReactComponent as WorldIcon } from '../resources/icons/basic_world.svg'
+import { ReactComponent as CompassIcon } from '../resources/icons/basic_compass.svg'
+import { ReactComponent as MapIcon } from '../resources/icons/basic_map.svg'
+import { ReactComponent as HeartIcon } from '../resources/icons/basic_heart.svg'
 
 const SectionFeatures = ({ data }) => (
   <Section>
     <GatsbyImageBackground sizes={data.sectionFeaturesImage.sizes}/>
-    <Row>
+    <Row className="row">
       <Col OneofFour>
         <FeatureBox
-          icon={<Icon />}
+          icon={<WorldIcon />}
           heading="Explore the world"
-          content="lorem epsum"
+          content="lorem epsum itaque explicabo praesentium expedita modi quam cumque. Quaerat"
         />
       </Col>
       <Col OneofFour>
         <FeatureBox
-          icon={<Icon />}
-          heading="Explore the world"
-          content="lorem epsum"
+          icon={<CompassIcon />}
+          heading="Meet nature"
+          content="Amet consectetur adipisicing elit. Sed quia architecto iusto ipsum dolorem. Nice Excellent"
         />
       </Col>
       <Col OneofFour>
         <FeatureBox
-          icon={<Icon />}
-          heading="Explore the world"
-          content="lorem epsum"
+          icon={<MapIcon />}
+          heading="Find your way"
+          content="Lorem epsum itaque explicabo praesentium expedita modi quam cumque. Quaerat?"
         />
       </Col>
       <Col OneofFour>
         <FeatureBox
-          icon={<Icon />}
-          heading="Explore the world"
-          content="lorem epsum"
+          icon={<HeartIcon />}
+          heading="Live a healthier life"
+          content="Lorem epsum itaque explicabo praesentium expedita modi quam cumque. Quaerat?"
         />
       </Col>
     </Row>

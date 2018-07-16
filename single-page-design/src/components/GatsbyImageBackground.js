@@ -20,11 +20,16 @@ const styles = css`
     top: 0;
     left: 0;
     z-index: -99;
+    
+  .gatsby-image-outer-wrapper {
+    height: 100%;
+  }
+
   .background-image,
   .background-overlay {
     position: absolute;
     width: 100%;
-    height: 100vh;
+    height: 100%;
     top: 0;
     left: 0;
   }
