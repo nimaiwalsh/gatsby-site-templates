@@ -52,9 +52,9 @@ export const Button = styled('a')`
     display: inline-block;
     border-radius: 10rem;
     background-color: ${props =>
-      props.white ? `${COLOURS.colorWhite}` : props.green ? 'green' : ''};
+      props.white ? `${COLOURS.colorWhite}` : props.green ? `${COLOURS.colorPrimary}` : ''};
     color: ${props =>
-      props.white ? `${COLOURS.colorGreyDark}` : props.green ? 'green' : ''};
+      props.white ? `${COLOURS.colorGreyDark}` : props.green ? `${COLOURS.colorWhite}` : ''};
     transition: all 0.2s;
     animation: ${props =>
       props.animated ? `${moveInBottom} .5s ease-out .75s` : ''};
@@ -84,7 +84,7 @@ export const Button = styled('a')`
     left: 0;
     z-index: -1;
     background-color: ${props =>
-      props.white ? `${COLOURS.colorWhite}` : props.green ? 'green' : ''};
+      props.white ? `${COLOURS.colorWhite}` : props.green ? `${COLOURS.colorPrimary}` : ''};
     transition: all 0.2s;
   }
 

@@ -10,6 +10,7 @@ export const COLOURS = {
   'colorTertiaryDark': '#5643FA',
 
   'colorGreyLight1': '#f7f7f7',
+  'colorGreyLight2': '#EEE',
   'colorGreyDark': '#777',
   'colorGreyMedium': '#c0c0c0ff',
   'colorWhite': '#FFF',

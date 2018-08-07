@@ -1,5 +1,6 @@
 import React from 'react'
 import CardContainer from './Card.css'
+import { Button } from './styledComponents'
 
 const Card = (props) => (
   <CardContainer {...props} >
@@ -10,9 +11,19 @@ const Card = (props) => (
           {props.heading}
         </span>
       </h4>
-      <div className="details">Details</div>
+      <div className="details">
+        {props.children}
+      </div>
     </div>
-    <div className="side side-back" />
+    <div className="side side-back">
+      <div className="call-to-action">
+        <div className="price-box">
+          <p className="price-only">Only</p>
+          <p className="price-value">{props.price}</p>
+          <Button white href="#">Click me</Button>
+        </div>
+      </div>
+    </div>
   </CardContainer>
 )
 

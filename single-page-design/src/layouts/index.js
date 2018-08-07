@@ -7,6 +7,7 @@ import Header from '../components/header'
 import SectionAbout from '../pages/SectionAbout'
 import SectionFeatures from '../pages/SectionFeatures'
 import SectionTours from '../pages/SectionTours'
+import StoriesSection from '../pages/StoriesSection'
 
 const Layout = ({ children, data }) => (
   <div>
@@ -22,6 +23,7 @@ const Layout = ({ children, data }) => (
       <SectionAbout />
       <SectionFeatures data={data}/>
       <SectionTours />
+      <StoriesSection />
     </main>
     {/* <div>{children()}</div> */}
   </div>

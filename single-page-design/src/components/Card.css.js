@@ -5,11 +5,11 @@ const CardContainer = styled('div')`
   /*Higher perspective makes card look like it spins*/
   perspective: 150rem;
   /*Container needs same height as children as it collapses due to children absolute position*/
-  height: 50rem;
+  height: 52rem;
   position: relative;
 
   & .side {
-    height: 50rem;
+    height: 52rem;
     transition: all 0.8s ease;
     position: absolute;
     top: 0;
@@ -42,7 +42,7 @@ const CardContainer = styled('div')`
     transform: rotateY(0deg);
   }
 
-  /*FRONT-SIDE STYLES OF ELEMENTS*/
+  /*==FRONT-SIDE STYLES OF ELEMENTS==*/
   & .picture {
     height: 23rem;
     clip-path: polygon(0 0, 100% 0, 100% 85%, 0 100%);
@@ -74,6 +74,49 @@ const CardContainer = styled('div')`
     ${props => props.primary && `background-image: linear-gradient(to right bottom, ${COLOURS.colorPrimaryLight}, ${COLOURS.colorPrimaryDark});`}
     ${props => props.secondary && `background-image: linear-gradient(to right bottom, ${COLOURS.colorSecondaryLight}, ${COLOURS.colorSecondaryDark});`}
     ${props => props.tertiary && `background-image: linear-gradient(to right bottom, ${COLOURS.colorTertiaryLight}, ${COLOURS.colorTertiaryDark});`}
+  }
+
+  & .details {
+    padding: 3rem;
+    ul {
+      list-style: none;
+      width: 80%;
+      margin: 0 auto;
+
+      li {
+        text-align: center;
+        font-size: 1.5rem;
+        padding: 1rem;
+
+        &:not(:last-child) {
+        border-bottom: 1px solid ${COLOURS.colorGreyLight2};
+        }
+      }
+    }
+  }
+
+  /*==BACK OF CARD ELEMENTS==*/
+  & .call-to-action {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+
+  & .price-box {
+    text-align: center;
+    color: ${COLOURS.colorWhite};
+  }
+
+  & .price-only {
+    font-size: 1.4rem;
+    text-transform: uppercase;
+  }
+
+  & .price-value {
+    font-size: 6rem;
+    font-weight: 100;
+    margin-bottom: 8rem;
   }
 `
 

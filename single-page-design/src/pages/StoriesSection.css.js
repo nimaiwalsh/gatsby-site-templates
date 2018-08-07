@@ -3,7 +3,7 @@ import { COLOURS } from '../utils/theme'
 
 const Section = styled('section')`
   background-color: ${COLOURS.colorGreyLight1};
-  padding: 25rem 0 15rem 0;
-  margin-top: -10rem;
+  /* padding: 25rem 0 15rem 0; */
+  /* margin-top: -10rem; */
 `
 export default Section
