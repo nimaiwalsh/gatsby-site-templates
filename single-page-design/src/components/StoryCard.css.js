@@ -5,7 +5,7 @@ const CardContainer = styled('div')`
   width: 75%;
   margin: 0 auto;
   box-shadow: 0 3rem 6rem rgba(${COLOURS.colorBlackRGB}, .1);
-  background-color: ${COLOURS.colorWhite};
+  background-color: rgba(${COLOURS.colorWhiteRGB}, .6);
   border-radius: 3px;
   padding: 6rem;
   padding-left: 9rem;

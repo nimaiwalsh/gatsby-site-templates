@@ -8,6 +8,7 @@ import SectionAbout from '../pages/SectionAbout'
 import SectionFeatures from '../pages/SectionFeatures'
 import SectionTours from '../pages/SectionTours'
 import StoriesSection from '../pages/StoriesSection'
+import BookingSection from '../pages/BookingSection'
 
 const Layout = ({ children, data }) => (
   <div>
@@ -24,6 +25,7 @@ const Layout = ({ children, data }) => (
       <SectionFeatures data={data}/>
       <SectionTours />
       <StoriesSection />
+      <BookingSection />
     </main>
     {/* <div>{children()}</div> */}
   </div>

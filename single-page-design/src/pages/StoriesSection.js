@@ -1,16 +1,21 @@
 import React from 'react'
+
 import { Row } from '../components/layoutComponents'
 import { HeadingSecondary } from '../components/styledComponents'
 import { CenterText } from '../components/utilityComponents'
 import StoryCard from '../components/StoryCard'
+import BackgroundVideo from '../components/BackgroundVideo'
 import Section from './StoriesSection.css'
 
 import Image1 from '../resources/images/nat-8.jpg'
 import Image2 from '../resources/images/nat-9.jpg'
+import bgvideomp4 from '../resources/images/video.mp4'
+import bgvideowebm from '../resources/images/video.webm'
 
 const StoriesSection = () => {
   return (
     <Section>
+      <BackgroundVideo source1={bgvideomp4} source2={bgvideowebm} />
       <CenterText>
         <HeadingSecondary marginBottom>We make people happy</HeadingSecondary>
       </CenterText>
