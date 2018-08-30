@@ -12,6 +12,7 @@ export const COLOURS = {
   'colorGreyLight1': '#f7f7f7',
   'colorGreyLight2': '#EEE',
   'colorGreyDark': '#777',
+  'colorGreyDark2': '#999',
   'colorGreyMedium': '#c0c0c0ff',
   'colorWhite': '#FFF',
   'colorBlack': '#000',

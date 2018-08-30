@@ -25,7 +25,6 @@ const Section = styled('section')`
     border-radius: 3px;
     box-shadow: 0 1.5rem 4rem rgba(${COLOURS.colorBlackRGB}, 0.3);
 
-    height: 50rem;
   }
 
   & .form-box {

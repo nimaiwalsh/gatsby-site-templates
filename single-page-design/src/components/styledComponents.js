@@ -43,6 +43,7 @@ export const Paragraph = styled('p')`
 `
 
 export const Button = styled('a')`
+  &,
   &:link,
   &:visited {
     position: relative;
@@ -62,12 +63,18 @@ export const Button = styled('a')`
     animation-fill-mode: backwards;
   }
 
+  /*For Button element below*/
+    border: none;
+    cursor: pointer;
+
   &:hover {
     transform: translateY(-0.3rem);
     box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.2);
   }
   /*Pressed*/
-  &:active {
+  &:active,
+  &:focus {
+    outline: none;
     transform: translateY(-0.1rem);
     box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.2);
   }
@@ -93,6 +100,8 @@ export const Button = styled('a')`
     opacity: 0;
   }
 `
+/*emotion.js - apply the styles from button above to this component*/
+export const FormButton = Button.withComponent('button')
 
 export const ButtonText = styled('a')`
   &:link,
