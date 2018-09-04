@@ -6,6 +6,7 @@ export const Form = styled('form')``
 export const FormGroup = styled('div')`
   & :not(:last-child) {
     margin-bottom: ${MARGIN.marginBottomSmall};
+    font-size: inherit;
   }
 
   input {

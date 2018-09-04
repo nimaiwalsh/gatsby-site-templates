@@ -66,6 +66,7 @@ export const Button = styled('a')`
   /*For Button element below*/
     border: none;
     cursor: pointer;
+    font-size: ${FONT.fontSizeDefault};
 
   &:hover {
     transform: translateY(-0.3rem);
