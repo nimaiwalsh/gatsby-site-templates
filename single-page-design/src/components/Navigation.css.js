@@ -15,7 +15,8 @@ export const NavigationBackground = styled('div')`
   z-index: 1000;
 
   /*ANIMATION EFFECT*/
-  transform: scale(80);
+  transition: transform .8s cubic-bezier(0.86, 0, 0.07, 1);
+  transform: ${props => props.navOpen && 'scale(80)'};
 `
 export const NavigationButton = styled('div')`
   background-color: ${COLOURS.colorWhite};
@@ -26,14 +27,20 @@ export const NavigationButton = styled('div')`
   right: 6rem;
   border-radius: 50%;
   z-index: 3000;
+  box-shadow: 0 1rem 3rem rgba(${COLOURS.colorBlackRGB}, .2);
+  cursor: pointer;
 `
 export const Nav = styled('nav')`
   height: 100vh;
-  width: 100%;
   position: fixed;
   top: 0;
   right: 0;
   z-index: 2000;
+
+  /*Transition when opened/closed*/
+  transition: all .8s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+  width: ${ props => props.navOpen ? '100%' : 0 };
+  opacity: ${ props => props.navOpen ? 1 : 0 };
 
   & .list {
     position: absolute;
@@ -42,6 +49,7 @@ export const Nav = styled('nav')`
     transform: translate(-50%, -50%);
     list-style: none;
     text-align: center;
+    width: 100%;
   }
 
   & .item {

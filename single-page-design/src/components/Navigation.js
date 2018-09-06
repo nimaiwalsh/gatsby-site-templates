@@ -22,11 +22,12 @@ export default class Navigation extends Component {
   }
 
   render() {
+    const { navopen } = this.state
     return (
-      <NavigationContainer onClick={this.toggleNav}>
-        <NavigationBackground />
-        <NavigationButton />
-        <Nav>
+      <NavigationContainer>
+        <NavigationBackground navOpen={ navopen } />
+        <NavigationButton onClick={ this.toggleNav } />
+        <Nav navOpen={ navopen }>
           <ul className="list">
             <li className="item">
               <Link className="link" to="#">About Natous</Link>
