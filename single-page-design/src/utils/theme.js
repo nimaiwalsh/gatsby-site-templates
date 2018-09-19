@@ -20,7 +20,6 @@ export const COLOURS = {
   'colorGreyMedium': '#c0c0c0ff',
   'colorWhite': '#FFF',
   'colorBlack': '#000',
-
   'colorWhiteRGB': '255,255,255',
   'colorBlackRGB': '0,0,0',
 }

@@ -11,7 +11,7 @@ import { ReactComponent as MapIcon } from '../resources/icons/basic_map.svg'
 import { ReactComponent as HeartIcon } from '../resources/icons/basic_heart.svg'
 
 const SectionFeatures = ({ data }) => (
-  <Section>
+  <Section id="features"> 
     <GatsbyImageBackground sizes={data.sectionFeaturesImage.sizes}/>
     <Row className="row">
       <Col OneofFour>
@@ -47,3 +47,4 @@ const SectionFeatures = ({ data }) => (
 )
 
 export default SectionFeatures
+

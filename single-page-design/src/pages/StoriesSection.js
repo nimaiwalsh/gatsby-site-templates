@@ -14,7 +14,7 @@ import bgvideowebm from '../resources/images/video.webm'
 
 const StoriesSection = () => {
   return (
-    <Section>
+    <Section id="stories">
       <BackgroundVideo source1={bgvideomp4} source2={bgvideowebm} />
       <CenterText>
         <HeadingSecondary marginBottom>We make people happy</HeadingSecondary>

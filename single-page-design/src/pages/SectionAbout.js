@@ -15,8 +15,8 @@ import Image1 from '../resources/images/nat-1.jpg'
 import Image2 from '../resources/images/nat-2.jpg'
 import Image3 from '../resources/images/nat-3.jpg'
 
-const SectionOne = () => (
-  <Section>
+const SectionAbout = () => (
+  <Section id="about">
     <CenterText>
       <HeadingSecondary marginBottom>
         Exciting tours for adventures
@@ -53,4 +53,4 @@ const SectionOne = () => (
   </Section>
 )
 
-export default SectionOne
+export default SectionAbout

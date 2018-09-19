@@ -8,7 +8,7 @@ import Section from './BookingSection.css'
 
 const StoriesSection = () => {
   return (
-    <Section>
+    <Section id="booking">
       <Row>
         <div className="booking-box">
           <div className="form-box">

@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { Component } from 'react'
 import PropTypes from 'prop-types'
 import Helmet from 'react-helmet'
 import globalCSS from '../utils/global.css'
@@ -11,29 +11,35 @@ import SectionTours from '../pages/SectionTours'
 import StoriesSection from '../pages/StoriesSection'
 import BookingSection from '../pages/BookingSection'
 import FooterSection from '../pages/FooterSection'
-
-const Layout = ({ children, data }) => (
-  <div>
-    <Helmet
-      title={data.site.siteMetadata.title}
-      meta={[
-        { name: 'description', content: 'Sample' },
-        { name: 'keywords', content: 'sample, something' },
-      ]}
-    />
-    <Navigation />
-    <Header siteTitle={data.site.siteMetadata.title} data={data} />
-    <main>
-      <SectionAbout />
-      <SectionFeatures data={data}/>
-      <SectionTours />
-      <StoriesSection />
-      <BookingSection />
-    </main>
-    <FooterSection />
-    {/* <div>{children()}</div> */}
-  </div>
-)
+import Modal from '../components/Modal'
+class Layout extends Component {
+  render() {
+    const children = this.props.children
+    const data = this.props.data
+    return (
+      <div>
+        <Helmet
+          title={data.site.siteMetadata.title}
+          meta={[
+            { name: 'description', content: 'Sample' },
+            { name: 'keywords', content: 'sample, something' },
+          ]}
+        />
+        <Navigation />
+        <Header siteTitle={data.site.siteMetadata.title} data={data} />
+        <main>
+          <SectionAbout />
+          <SectionFeatures data={data} />
+          <SectionTours />
+          <StoriesSection />
+          <BookingSection />
+        </main>
+        <FooterSection />
+        {/* <div>{children()}</div> */}
+      </div>
+    )
+  }
+}
 
 Layout.propTypes = {
   children: PropTypes.func,

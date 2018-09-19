@@ -6,6 +6,7 @@ import {
   NavigationContainer,
   NavigationBackground,
   NavigationButton,
+  BurgerMenuIcon,
   Nav,
 } from './Navigation.css'
 
@@ -26,7 +27,9 @@ export default class Navigation extends Component {
     return (
       <NavigationContainer>
         <NavigationBackground navOpen={ navopen } />
-        <NavigationButton onClick={ this.toggleNav } />
+        <NavigationButton onClick={ this.toggleNav }>
+          <BurgerMenuIcon navOpen={ navopen } />
+        </NavigationButton>
         <Nav navOpen={ navopen }>
           <ul className="list">
             <li className="item">
@@ -36,7 +39,7 @@ export default class Navigation extends Component {
               <Link className="link" to="#">Your benefits</Link>
             </li>
             <li className="item">
-              <Link className="link" to="#">Popular tours</Link>
+              <Link className="link" to="#tours">Popular tours</Link>
             </li>
             <li className="item">
               <Link className="link" to="#">Stories</Link>
