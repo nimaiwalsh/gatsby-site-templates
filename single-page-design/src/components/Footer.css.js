@@ -1,7 +1,7 @@
 import styled from 'react-emotion'
 import { COLOURS } from '../utils/theme'
 
-export const Footer = styled('footer')`
+export const FooterContainer = styled('footer')`
   background-color: ${COLOURS.colorGreyDark3};
   padding: 10rem 0;
   font-size: 1.4rem;

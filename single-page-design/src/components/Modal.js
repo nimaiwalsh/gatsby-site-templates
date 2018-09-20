@@ -15,13 +15,13 @@ const Modal = ({ open, handleClose }) => {
 
   return (
     <Popup open={open}>
-      <CloseButton onClick={() => handleClose()}>Close</CloseButton>
       <Content>
         <div className="popup-left">
           <img className="image" src={Image1} />
           <img className="image" src={Image2} />
         </div>
         <div className="popup-right">
+          <CloseButton onClick={() => handleClose()}>&times;</CloseButton>
           <HeadingSecondary>Start booking now</HeadingSecondary>
           <HeadingTertiary marginBottom>
             Important &ndash; Please read these terms

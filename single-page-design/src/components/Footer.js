@@ -2,13 +2,13 @@ import React from 'react'
 import Link from 'gatsby-link'
 
 import { Row, Col } from '../components/layoutComponents'
-import { Footer, LogoBox, FooterNavigation, CopyrightText } from './FooterSection.css'
+import { FooterContainer, LogoBox, FooterNavigation, CopyrightText } from './Footer.css'
 
 import logo from '../resources/images/logo-green-2x.png'
 
-const StoriesSection = () => {
+const Footer = () => {
   return (
-    <Footer>
+    <FooterContainer>
       <LogoBox>
         <img src={logo} />
       </LogoBox>
@@ -30,8 +30,8 @@ const StoriesSection = () => {
           </CopyrightText>
         </Col>
       </Row>
-    </Footer>
+    </FooterContainer>
   )
 }
 
-export default StoriesSection
+export default Footer

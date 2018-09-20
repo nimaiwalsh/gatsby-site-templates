@@ -26,26 +26,36 @@ export default class Navigation extends Component {
     const { navopen } = this.state
     return (
       <NavigationContainer>
-        <NavigationBackground navOpen={ navopen } />
-        <NavigationButton onClick={ this.toggleNav }>
-          <BurgerMenuIcon navOpen={ navopen } />
+        <NavigationBackground navOpen={navopen} />
+        <NavigationButton onClick={this.toggleNav}>
+          <BurgerMenuIcon navOpen={navopen} />
         </NavigationButton>
-        <Nav navOpen={ navopen }>
-          <ul className="list">
+        <Nav navOpen={navopen}>
+          <ul className="list" onClick={ this.toggleNav } >
             <li className="item">
-              <Link className="link" to="#">About Natous</Link>
+              <Link className="link" to="#about">
+                About Natous
+              </Link>
             </li>
             <li className="item">
-              <Link className="link" to="#">Your benefits</Link>
+              <Link className="link" to="#features">
+                Your benefits
+              </Link>
             </li>
             <li className="item">
-              <Link className="link" to="#tours">Popular tours</Link>
+              <Link className="link" to="#tours">
+                Popular tours
+              </Link>
             </li>
             <li className="item">
-              <Link className="link" to="#">Stories</Link>
+              <Link className="link" to="#stories">
+                Stories
+              </Link>
             </li>
             <li className="item">
-              <Link className="link" to="#">Book now</Link>
+              <Link className="link" to="#booking">
+                Book now
+              </Link>
             </li>
           </ul>
         </Nav>

@@ -1,5 +1,17 @@
-import styled from 'react-emotion'
+import styled, { keyframes } from 'react-emotion'
 import { COLOURS } from '../utils/theme'
+
+const fadeIn = keyframes`
+  0% {
+    opacity: 0;
+    transform: scale(.25);
+  }
+
+  100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+`
 
 export const Popup = styled('div')`
   position: fixed;
@@ -16,6 +28,7 @@ export const Popup = styled('div')`
 `
 
 export const Content = styled('div')`
+  position: relative;
   display: block;
   width: 75%;
   background-color: rgba(${COLOURS.colorWhiteRGB}, 1);
@@ -23,6 +36,10 @@ export const Content = styled('div')`
   border-radius: 3px;
   overflow: hidden;
   display: flex;
+
+  /*Animate the content card when displayed on screen*/
+  animation: ${fadeIn} .5s .1s;
+  animation-fill-mode: backwards;
 
   .popup-left {
     width: 33.33333%;
@@ -53,5 +70,15 @@ export const Content = styled('div')`
 `
 
 export const CloseButton = styled('div')`
-  color: #fff;
+  color: ${COLOURS.colorGreyDark2};
+  position: absolute;
+  top: 2.5rem;
+  right: 2.5rem;
+  font-size: 3rem;
+  cursor: pointer;
+  line-height: 1;
+
+  &:hover {
+    color: ${COLOURS.colorPrimary};
+  }
 `
