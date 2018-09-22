@@ -6,6 +6,7 @@ import globalCSS from '../utils/global.css'
 import Header from '../components/header'
 import Navigation from '../components/Navigation'
 import Footer from '../components/Footer'
+
 const Layout = ({ children, data }) => {
   return (
     <div>
