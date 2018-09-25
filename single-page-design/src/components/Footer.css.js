@@ -1,11 +1,15 @@
 import styled from 'react-emotion'
-import { COLOURS } from '../utils/theme'
+import { COLOURS, MEDIAQUERY } from '../utils/theme'
 
 export const FooterContainer = styled('footer')`
   background-color: ${COLOURS.colorGreyDark3};
   padding: 10rem 0;
   font-size: 1.4rem;
   color: ${COLOURS.colorGreyLight1};
+
+  ${MEDIAQUERY.tabletPort} {
+    padding: 8rem 0;
+  } 
 
   a {
     &:link,
@@ -42,6 +46,11 @@ export const FooterNavigation = styled('div')`
   padding-top: 2rem;
   display: inline-block;
 
+  ${MEDIAQUERY.tabletPort} {
+    width: 100%;
+    text-align: center;
+  } 
+
   & ul {
     list-style: none;
   }
@@ -60,4 +69,9 @@ export const CopyrightText = styled('p')`
   padding-top: 2rem;
   width: 80%;
   float: right;
+
+  ${MEDIAQUERY.tabletPort} {
+    width: 100%;
+    float: none;
+  } 
 `

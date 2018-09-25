@@ -24,15 +24,19 @@ const globalCSS = injectGlobal`
     font-size: 62.5%;
 
     ${MEDIAQUERY.bigDesktop} {
-      font-size: 75%; //1rem = 12px, 12/16 = 80%
+      font-size: 75%; 
     }
 
     ${MEDIAQUERY.tabletLand} {
-      font-size: 56.25%; //1rem = 9px, 9/16 = 56.25%
+      /* 1rem = 9px, 9/16 = 56.25%
+      applies when resolution < 1200px */
+      font-size: 56.25%; 
     }
 
     ${MEDIAQUERY.tabletPort} {
-      font-size: 50%; //1rem = 8px, 8/16 = 50%
+      /*1rem = 8px, 8/16 = 50%
+      applies when < 900px */
+      font-size: 50%; 
     }
   }
 
@@ -46,6 +50,10 @@ const globalCSS = injectGlobal`
     padding: 3rem;
 
     box-sizing: border-box;  
+
+    ${MEDIAQUERY.tabletLand} {
+      padding: 0; 
+    }
   }
 `
 

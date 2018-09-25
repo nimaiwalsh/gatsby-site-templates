@@ -1,11 +1,16 @@
 import styled from 'react-emotion'
-import { COLOURS, GRID } from '../utils/theme'
+import { COLOURS, GRID, MEDIAQUERY } from '../utils/theme'
 
 export const Row = styled('div')`
   max-width: ${GRID.gridWidth};
   margin: 0 auto;
+
   &:not(:last-child) {
     margin-bottom: ${GRID.gutterVertical};
+
+    ${MEDIAQUERY.tabletPort} {
+      margin-bottom: ${GRID.gutterVerticalSmall};
+    }
   }
 
   /*CLEARFIX*/
@@ -13,6 +18,11 @@ export const Row = styled('div')`
     content: '';
     display: table;
     clear: both;
+  }
+
+  ${MEDIAQUERY.tabletPort} {
+    max-width: 50rem;
+    padding: 0 3rem;
   }
 `
 export const Col = styled('div')`
@@ -44,6 +54,16 @@ export const Col = styled('div')`
 
   &:not(:last-child) {
     margin-right: ${GRID.gutterHorizontal};
+    
+    ${MEDIAQUERY.tabletPort} {
+      margin-right: 0;
+      mar
+    }
+  }
+
+  ${MEDIAQUERY.tabletPort} {
+    width: 100%;
+    margin-bottom: ${GRID.gutterVerticalSmall};
   }
 `
 

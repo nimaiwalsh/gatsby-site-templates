@@ -1,7 +1,6 @@
 import styled, { keyframes } from 'react-emotion'
 import backgroundImage from '../resources/images/hero.jpg'
-import { COLOURS } from '../utils/theme'
-import { moveInLeft, moveInRight } from '../utils/animations.css'
+import { COLOURS, MEDIAQUERY } from '../utils/theme'
 
 const HeaderMain = styled('header')`
   position: relative;
@@ -17,6 +16,10 @@ const HeaderMain = styled('header')`
 
     /* Create a nice polygon shape to clip the bottom*/
     clip-path: polygon(0 0, 100% 0, 100% 75vh, 0 100%);
+
+    ${MEDIAQUERY.phone} {
+      clip-path: polygon(0 0, 100% 0, 100% 85vh, 0 100%);
+    }
   }
 
   & .background-overlay {
@@ -44,40 +47,6 @@ const HeaderMain = styled('header')`
     left: 50%;
     transform: translate(-50%, -50%);
     text-align: center;
-  }
-
-  & .heading-primary {
-    color: #FFF;
-    text-transform: uppercase;
-    margin-bottom: 6rem;
-    /*Fix animation shacking on child elements*/
-    backface-visibility: hidden;
-
-    &__main {
-      display: block;
-      font-size: 6rem;
-      font-weight: 400;
-      letter-spacing: 3.5rem;
-
-      animation: ${moveInLeft} 1s ease-out;
-
-      /*
-      animation-name:
-      animation-duration:
-      animation-delay:
-      animation-iteration-count: the nuber of times the animation plays
-      animation-timing-function: ease-out, ease-in, cubic-bezier() etc...
-      */
-    }
-
-    &__sub {
-      display: block;
-      font-size: 2rem;
-      font-weight: 700;
-      letter-spacing: 1.75rem;
-
-      animation: ${moveInRight} 1s ease-out;
-    }
   }
 `
 

@@ -30,6 +30,7 @@ export const FONT = {
 export const GRID = {
   gridWidth: '114rem',
   gutterVertical: '8rem',
+  gutterVerticalSmall: '6rem',
   gutterHorizontal: '6rem',
 }
 
@@ -48,6 +49,9 @@ export const MEDIAQUERY = {
 
   //em are better than rem's in Media Queries - more stable. 
   //1em = 16px
+
+  //Order of applying modia queries
+  // Base/Global + tyography > General Layout + grid > page layout > components
 
   bigDesktop: '@media (min-width: 112.5em)', //1800px
   tabletLand: '@media (max-width: 75em)', //1200px

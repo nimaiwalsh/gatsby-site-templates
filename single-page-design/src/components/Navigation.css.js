@@ -1,5 +1,5 @@
 import styled from 'react-emotion'
-import { COLOURS } from '../utils/theme'
+import { COLOURS, MEDIAQUERY } from '../utils/theme'
 
 export const NavigationBackground = styled('div')`
   height: 6rem;
@@ -18,6 +18,16 @@ export const NavigationBackground = styled('div')`
   /*ANIMATION EFFECT*/
   transition: transform 0.8s cubic-bezier(0.86, 0, 0.07, 1);
   transform: ${props => props.navOpen && 'scale(80)'};
+
+  ${MEDIAQUERY.tabletPort} {
+    top: 4.5rem;
+    right: 4.5rem;
+  } 
+
+  ${MEDIAQUERY.phone} {
+    top: 3.5rem;
+    right: 3.5rem;
+  } 
 `
 
 export const BurgerMenuIcon = styled('span')`
@@ -77,6 +87,16 @@ export const NavigationButton = styled('div')`
   display: flex;
   align-items: center;
   justify-content: center;
+
+  ${MEDIAQUERY.tabletPort} {
+    top: 4rem;
+    right: 4rem;
+  }  
+
+  ${MEDIAQUERY.phone} {
+    top: 3rem;
+    right: 3rem;
+  } 
 `
 
 export const Nav = styled('nav')`

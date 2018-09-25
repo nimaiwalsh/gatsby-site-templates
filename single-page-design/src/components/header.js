@@ -4,7 +4,7 @@ import Img from 'gatsby-image'
 import logo from '../resources/images/logo-white.png'
 
 import HeaderMain from './header.css'
-import { Button } from '../components/styledComponents'
+import { HeadingPrimary, Button } from '../components/styledComponents'
 
 const Header = ({ siteTitle, data }) => (
   //Background image needs to be own element and not css background property
@@ -18,13 +18,12 @@ const Header = ({ siteTitle, data }) => (
     </div>
 
     <div className="text-box">
-      <h1 className="heading-primary">
-        <span className="heading-primary__main">Outdoors</span>
-        <span className="heading-primary__sub">Is where life happens</span>
-      </h1>
+      <HeadingPrimary>
+        <span className="main">Outdoors</span>
+        <span className="sub">Is where life happens</span>
+      </HeadingPrimary>
       <Button white animated href="#">Click me</Button>
     </div>
-
   </HeaderMain>
 )
 
