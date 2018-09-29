@@ -1,5 +1,5 @@
 import styled from 'react-emotion'
-import { COLOURS, FONT, MARGIN } from '../utils/theme'
+import { COLOURS, FONT, MARGIN, MEDIAQUERY } from '../utils/theme'
 
 export const Form = styled('form')``
 
@@ -21,6 +21,10 @@ export const FormGroup = styled('div')`
     width: 90%;
     display: block;
     transition: all 0.3s;
+
+    ${MEDIAQUERY.tabletPort} {
+      width: 100%;
+    }
 
     & ::placeholder {
       color: ${COLOURS.colorGreyDark2};
@@ -68,6 +72,11 @@ export const FormRadioGroup = styled('div')`
 export const Radio = styled('div')`
   width: 50%;
   display: inline-block;
+
+  ${MEDIAQUERY.tabletPort} {
+    width: 100%;
+    margin-bottom: 1rem;
+  }
 
   & .radio-label {
     font-size: ${FONT.fontSizeDefault};

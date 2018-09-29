@@ -21,6 +21,11 @@ export const Row = styled('div')`
   }
 
   ${MEDIAQUERY.tabletPort} {
+    max-width: 60rem;
+    padding: 0 3rem;
+  }
+
+  ${MEDIAQUERY.phone} {
     max-width: 50rem;
     padding: 0 3rem;
   }

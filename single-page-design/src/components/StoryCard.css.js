@@ -1,5 +1,5 @@
 import styled from 'react-emotion'
-import { COLOURS, FONT } from '../utils/theme'
+import { COLOURS, FONT, MEDIAQUERY } from '../utils/theme'
 
 const CardContainer = styled('div')`
   width: 75%;
@@ -12,9 +12,21 @@ const CardContainer = styled('div')`
   font-size: ${FONT.fontSizeDefault};
   /*Skew the whole card*/
   transform: skewX(-12deg);
-  /* all direct childredn should not be skewed */
+  /* all direct children should not be skewed */
   & > * {
     transform: skewX(12deg);
+  }
+
+  ${MEDIAQUERY.tabletPort} {
+    width: 100%;
+    padding: 4rem 7rem;
+  }
+
+  ${MEDIAQUERY.phone} {
+   transform: skewX(0);
+   & > * {
+    transform: skewX(0);
+    } 
   }
 
   .shape {

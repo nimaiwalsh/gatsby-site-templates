@@ -1,5 +1,5 @@
 import styled from 'react-emotion'
-import { COLOURS } from '../utils/theme'
+import { COLOURS, MEDIAQUERY } from '../utils/theme'
 
 const CardContainer = styled('div')`
   /*Higher perspective makes card look like it spins*/
@@ -28,9 +28,21 @@ const CardContainer = styled('div')`
 
   & .side-back {
     transform: rotateY(180deg);
-    ${props => props.primary && `background-image: linear-gradient(to right bottom, ${COLOURS.colorPrimaryLight}, ${COLOURS.colorPrimaryDark});`}
-    ${props => props.secondary && `background-image: linear-gradient(to right bottom, ${COLOURS.colorSecondaryLight}, ${COLOURS.colorSecondaryDark});`}
-    ${props => props.tertiary && `background-image: linear-gradient(to right bottom, ${COLOURS.colorTertiaryLight}, ${COLOURS.colorTertiaryDark});`}
+    ${props =>
+      props.primary &&
+      `background-image: linear-gradient(to right bottom, ${
+        COLOURS.colorPrimaryLight
+      }, ${COLOURS.colorPrimaryDark});`}
+    ${props =>
+      props.secondary &&
+      `background-image: linear-gradient(to right bottom, ${
+        COLOURS.colorSecondaryLight
+      }, ${COLOURS.colorSecondaryDark});`}
+    ${props =>
+      props.tertiary &&
+      `background-image: linear-gradient(to right bottom, ${
+        COLOURS.colorTertiaryLight
+      }, ${COLOURS.colorTertiaryDark});`}
   }
 
   /*Rotate card sides on card container hover*/
@@ -50,9 +62,21 @@ const CardContainer = styled('div')`
     /*New CSS property to blend image with gradient overlay*/
     background-blend-mode: screen;
     /* Background image and gradient colour based on props */
-    ${props => props.primary && `background-image: linear-gradient(to right bottom, ${COLOURS.colorPrimaryLight}, ${COLOURS.colorPrimaryDark}), url(${props.image});`}
-    ${props => props.secondary && `background-image: linear-gradient(to right bottom, ${COLOURS.colorSecondaryLight}, ${COLOURS.colorSecondaryDark}), url(${props.image});`}
-    ${props => props.tertiary && `background-image: linear-gradient(to right bottom, ${COLOURS.colorTertiaryLight}, ${COLOURS.colorTertiaryDark}), url(${props.image});`}
+    ${props =>
+      props.primary &&
+      `background-image: linear-gradient(to right bottom, ${
+        COLOURS.colorPrimaryLight
+      }, ${COLOURS.colorPrimaryDark}), url(${props.image});`}
+    ${props =>
+      props.secondary &&
+      `background-image: linear-gradient(to right bottom, ${
+        COLOURS.colorSecondaryLight
+      }, ${COLOURS.colorSecondaryDark}), url(${props.image});`}
+    ${props =>
+      props.tertiary &&
+      `background-image: linear-gradient(to right bottom, ${
+        COLOURS.colorTertiaryLight
+      }, ${COLOURS.colorTertiaryDark}), url(${props.image});`}
   }
   
   & .heading {
@@ -71,9 +95,21 @@ const CardContainer = styled('div')`
     padding: 1rem 1.5rem;
     /*CSS property to clone the properties when the box breaks onto line*/
     box-decoration-break: clone;
-    ${props => props.primary && `background-image: linear-gradient(to right bottom, ${COLOURS.colorPrimaryLight}, ${COLOURS.colorPrimaryDark});`}
-    ${props => props.secondary && `background-image: linear-gradient(to right bottom, ${COLOURS.colorSecondaryLight}, ${COLOURS.colorSecondaryDark});`}
-    ${props => props.tertiary && `background-image: linear-gradient(to right bottom, ${COLOURS.colorTertiaryLight}, ${COLOURS.colorTertiaryDark});`}
+    ${props =>
+      props.primary &&
+      `background-image: linear-gradient(to right bottom, ${
+        COLOURS.colorPrimaryLight
+      }, ${COLOURS.colorPrimaryDark});`}
+    ${props =>
+      props.secondary &&
+      `background-image: linear-gradient(to right bottom, ${
+        COLOURS.colorSecondaryLight
+      }, ${COLOURS.colorSecondaryDark});`}
+    ${props =>
+      props.tertiary &&
+      `background-image: linear-gradient(to right bottom, ${
+        COLOURS.colorTertiaryLight
+      }, ${COLOURS.colorTertiaryDark});`}
   }
 
   & .details {
@@ -117,6 +153,59 @@ const CardContainer = styled('div')`
     font-size: 6rem;
     font-weight: 100;
     margin-bottom: 8rem;
+  }
+
+  /*MEDIA FOR SMALL DEVICES*/
+  ${MEDIAQUERY.tabletPort} {
+    height: auto;
+    border-radius: 3px;
+    background-color: ${COLOURS.colorWhite};
+    box-shadow: 0 1.5rem 4rem rgba(${COLOURS.colorBlackRGB}, .15);
+
+    & .side {
+      height: auto;
+      position: relative;
+      box-shadow: none;
+    }
+
+    * .details {
+      padding: 1rem 3rem;
+    }
+
+    & .side-back {
+      transform: rotateY(0);
+      clip-path: polygon(0 15%, 100% 0, 100% 100%, 0 100%);
+    }
+
+    /*Rotate card sides on card container hover*/
+    &:hover .side-front {
+      transform: rotateY(0);
+    }
+
+    &:hover .side-back {
+      transform: rotateY(0);
+    }
+
+    & .call-to-action {
+      position: relative;
+      top: 0;
+      left: 0;
+      transform: translate(0);
+      width: 100%;
+      padding: 7rem 4rem 4rem 4rem;
+    }
+
+    & .price-box {
+    }
+
+    & .price-only {
+      font-size: 1.4rem;
+    }
+
+    & .price-value {
+      font-size: 6rem;
+      margin-bottom: 3rem;
+    }
   }
 `
 

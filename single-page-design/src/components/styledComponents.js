@@ -60,12 +60,13 @@ export const HeadingSecondary = styled('h2')`
   }
 
   /*PROPS UTILITIES*/
-  ${props =>
-    props.marginBottom && `margin-bottom: ${MARGIN.marginBottomLarge}`};
+  ${props => props.marginBottom && `margin-bottom: ${MARGIN.marginBottomLarge}`};
 
   ${MEDIAQUERY.tabletPort} {
     font-size: 3rem;
+    ${props => props.marginBottom && `margin-bottom: 5rem`};
   }
+  
   ${MEDIAQUERY.phone} {
     font-size: 2.5rem;
   }
